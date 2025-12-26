@@ -8,5 +8,8 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		lazy = false,
+		config = function()
+			vim.keymap.set("n", "<C-n>", "<cmd>Neotree toggle<cr>", { desc = "Toggle Neo-tree" })
+		end,
 	},
 }

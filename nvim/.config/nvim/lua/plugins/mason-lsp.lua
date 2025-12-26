@@ -76,6 +76,28 @@ return {
 			end,
 		})
 
+		vim.api.nvim_create_user_command("EslintFixAll", function()
+			local bufnr = vim.api.nvim_get_current_buf()
+
+			-- Find an attached eslint client for this buffer
+			local clients = vim.lsp.get_clients({ bufnr = bufnr, name = "eslint" })
+			local client = clients[1]
+			if not client then
+				vim.notify("eslint LSP not attached", vim.log.levels.WARN)
+				return
+			end
+
+			-- Ask eslint-language-server to apply all fixes for this file
+			client.request("workspace/executeCommand", {
+				command = "eslint.applyAllFixes",
+				arguments = {
+					{
+						uri = vim.uri_from_bufnr(bufnr),
+					},
+				},
+			}, nil, bufnr)
+		end, {})
+
 		-- Enable servers (Nvim 0.11+)
 		vim.lsp.enable({
 			"gopls",
