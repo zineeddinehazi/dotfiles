@@ -1,0 +1,7 @@
+1.Install fav packages : zsh brave-bin visual-studio-code-bin stow vlc locate tmux keepassxc ...
+2.Change shell to zsh and stow zsh folder.
+3.Stow starship config to get the perfect shell.
+4.Add rounded borders and brave keybinding in hyprland.conf
+5.Install nvm package then a node version.
+6.Enable vscode github sync to get the usual setup.
+7.
