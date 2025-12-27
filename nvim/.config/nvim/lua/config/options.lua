@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.opt.number = true -- absolute number on current line
+vim.opt.relativenumber = true -- relative numbers on other lines
+
 vim.diagnostic.config({
 	virtual_text = true, -- inline text
 	signs = true, -- gutter signs

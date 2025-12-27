@@ -12,6 +12,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		local opts = { buffer = ev.buf, silent = true }
 
 		map("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, { desc = "Hover docs" }))
+		map("n", "D", vim.lsp.buf.definition, vim.tbl_extend("force", opts, { desc = "Hover docs" }))
 		map(
 			{ "n", "v" },
 			"<leader>ca",
