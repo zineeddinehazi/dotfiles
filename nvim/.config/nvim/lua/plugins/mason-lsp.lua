@@ -6,8 +6,11 @@ return {
 			"mason-org/mason-lspconfig.nvim",
 			opts = {
 				ensure_installed = {
-					-- Go
+					-- Go / Lua
 					"gopls",
+					"lua_ls",
+
+					--[[ 
 					-- Web
 					"html",
 					"cssls",
@@ -16,6 +19,7 @@ return {
 					"ts_ls",
 					-- Lint
 					"eslint",
+					]]
 				},
 				automatic_installation = true,
 			},
@@ -36,6 +40,7 @@ return {
 			capabilities = capabilities,
 		})
 
+		--[[ 
 		vim.lsp.config("html", {
 			capabilities = capabilities,
 		})
@@ -97,15 +102,20 @@ return {
 				},
 			}, nil, bufnr)
 		end, {})
+		]]
 
 		-- Enable servers (Nvim 0.11+)
 		vim.lsp.enable({
 			"gopls",
+			"lua_ls",
+
+			--[[ 
 			"html",
 			"cssls",
 			"tailwindcss",
 			"ts_ls",
 			"eslint",
+			]]
 		})
 	end,
 }

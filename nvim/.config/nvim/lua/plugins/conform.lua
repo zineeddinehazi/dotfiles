@@ -8,7 +8,8 @@ return {
 				lsp_fallback = true,
 			},
 			formatters_by_ft = {
-				-- Web (use prettier or prettierd)
+				--[[ 
+				--Web (use prettier or prettierd)
 				html = { "prettierd", "prettier" },
 				css = { "prettierd", "prettier" },
 				javascript = { "prettierd", "prettier" },
@@ -16,11 +17,14 @@ return {
 				javascriptreact = { "prettierd", "prettier" }, -- jsx
 				typescriptreact = { "prettierd", "prettier" }, -- tsx
 
-				-- Go / Python / Lua / Rust
-				go = { "gofmt" },
+				--Python / Rust
 				python = { "black" },
+				rust = { "rustfmt" }, 
+				]]
+
+				-- Go / Lua
+				go = { "gofmt" },
 				lua = { "stylua" },
-				rust = { "rustfmt" },
 			},
 		})
 	end,
