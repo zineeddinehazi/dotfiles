@@ -1,6 +1,28 @@
 {
 	"telemetry": { "diagnostics": false, "metrics": false },
-	"theme": "Catppuccin Mocha",
+	"theme": "Rosé Pine",
+
+	"theme_overrides": {
+		"Rosé Pine": {
+			"background": "#000000",
+			"surface.background": "#000000",
+			"elevated_surface.background": "#000000",
+			"editor.background": "#000000",
+			"editor.gutter.background": "#000000",
+			"tab_bar.background": "#000000",
+			"tab.inactive_background": "#000000",
+			"tab.active_background": "#000000",
+			"panel.background": "#000000",
+			"status_bar.background": "#000000",
+			"title_bar.background": "#000000",
+			"toolbar.background": "#000000",
+			"terminal.background": "#000000",
+			"text": "#ffffff",
+			"editor.foreground": "#ffffff",
+			"terminal.foreground": "#ffffff",
+		},
+	},
+
 	"buffer_font_family": "JetBrainsMono Nerd Font",
 	"buffer_font_size": 17.0,
 	"ui_font_family": "JetBrainsMono Nerd Font",

@@ -3,7 +3,8 @@ return {
 	-- optional but common: gives icons in the picker
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		require("fzf-lua").setup({}) -- sane defaults
+		require("fzf-lua").setup({})
+
 		local fzf = require("fzf-lua")
 		vim.keymap.set("n", "<leader>ff", function()
 			fzf.files()
