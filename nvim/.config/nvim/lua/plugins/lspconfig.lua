@@ -32,7 +32,8 @@ return {
 				-- Toggle Inlay Hints (Golang specific)
 				if client.supports_method("textDocument/inlayHint") then
 					vim.keymap.set("n", "<leader>th", function()
-						vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr }), { bufnr = bufnr })
+						vim.lsp.inlay_hint.enable(
+						not vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr }), { bufnr = bufnr })
 					end, { buffer = bufnr, desc = "[T]oggle [H]ints" })
 				end
 			end

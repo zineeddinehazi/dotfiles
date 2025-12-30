@@ -1,13 +1,14 @@
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
 #Go path
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
 # Texlive path
 export PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 
 # Zinit setup
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -76,7 +77,7 @@ eval "$(zoxide init zsh)"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 #NVM setup
 export NVM_DIR="$HOME/.config/nvm"

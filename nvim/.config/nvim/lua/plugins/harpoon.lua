@@ -1,18 +1,42 @@
 return {
-	{
-		"ThePrimeagen/harpoon",
-		-- Harpoon v1: do NOT set branch = "harpoon2"
-		lazy = false,
-		dependencies = { "nvim-lua/plenary.nvim" },
-
-		keys = {
-			{ "<leader>a", "<cmd>lua require('harpoon.mark').add_file()<CR>", desc = "Harpoon add file" },
-			{ "<leader>m", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", desc = "Harpoon menu" },
-
-			{ "<leader>1", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", desc = "Harpoon file 1" },
-			{ "<leader>2", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", desc = "Harpoon file 2" },
-			{ "<leader>3", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", desc = "Harpoon file 3" },
-			{ "<leader>4", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", desc = "Harpoon file 4" },
+	"ThePrimeagen/harpoon",
+	branch = "harpoon2",
+	opts = {
+		menu = {
+			width = vim.api.nvim_win_get_width(0) - 4,
+		},
+		settings = {
+			save_on_toggle = true,
 		},
 	},
+	keys = function()
+		local keys = {
+			{
+				"<leader>a",
+				function()
+					require("harpoon"):list():add()
+				end,
+				desc = "Harpoon File",
+			},
+			{
+				"<leader>m",
+				function()
+					local harpoon = require("harpoon")
+					harpoon.ui:toggle_quick_menu(harpoon:list())
+				end,
+				desc = "Harpoon Quick Menu",
+			},
+		}
+
+		for i = 1, 9 do
+			table.insert(keys, {
+				"<leader>" .. i,
+				function()
+					require("harpoon"):list():select(i)
+				end,
+				desc = "Harpoon to File " .. i,
+			})
+		end
+		return keys
+	end,
 }
