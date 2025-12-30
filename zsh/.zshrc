@@ -1,8 +1,3 @@
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
-
 #Go path
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
@@ -67,8 +62,6 @@ alias la="eza -a --icons"
 alias tree="eza -T --icons"
 alias cd="z"
 alias cat="bat"
-alias y="yazi"
-alias suiii="sudo pacman -Syu"
 alias ml-activate="source ~/programming/Python/ml-python/venv/bin/activate"
 
 # Enable zoxide
@@ -77,9 +70,9 @@ eval "$(zoxide init zsh)"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
-#NVM setup
+# NVM setup
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
