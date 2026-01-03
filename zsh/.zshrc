@@ -62,7 +62,6 @@ alias la="eza -a --icons"
 alias tree="eza -T --icons"
 alias cd="z"
 alias cat="bat"
-alias ml-activate="source ~/programming/Python/ml-python/venv/bin/activate"
 
 # Enable zoxide
 eval "$(zoxide init zsh)"
