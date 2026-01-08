@@ -1,88 +1,87 @@
 {
-	"telemetry": { "diagnostics": false, "metrics": false },
-	"theme": "Rosé Pine",
+  "telemetry": { "diagnostics": false, "metrics": false },
+  "theme": "Rosé Pine",
+  "theme_overrides": {
+    "Rosé Pine": {
+      "background": "#000000",
+      "surface.background": "#000000",
+      "elevated_surface.background": "#000000",
+      "editor.background": "#000000",
+      "editor.gutter.background": "#000000",
+      "tab_bar.background": "#000000",
+      "tab.inactive_background": "#000000",
+      "tab.active_background": "#000000",
+      "panel.background": "#000000",
+      "status_bar.background": "#000000",
+      "title_bar.background": "#000000",
+      "toolbar.background": "#000000",
+      "terminal.background": "#000000",
+      "text": "#ffffff",
+      "editor.foreground": "#ffffff",
+      "terminal.foreground": "#ffffff"
+    }
+  },
 
-	"theme_overrides": {
-		"Rosé Pine": {
-			"background": "#000000",
-			"surface.background": "#000000",
-			"elevated_surface.background": "#000000",
-			"editor.background": "#000000",
-			"editor.gutter.background": "#000000",
-			"tab_bar.background": "#000000",
-			"tab.inactive_background": "#000000",
-			"tab.active_background": "#000000",
-			"panel.background": "#000000",
-			"status_bar.background": "#000000",
-			"title_bar.background": "#000000",
-			"toolbar.background": "#000000",
-			"terminal.background": "#000000",
-			"text": "#ffffff",
-			"editor.foreground": "#ffffff",
-			"terminal.foreground": "#ffffff",
-		},
-	},
+  "buffer_font_family": "Mononoki Nerd Font Mono",
+  "buffer_font_size": 17.0,
+  "ui_font_family": "Mononoki Nerd Font Mono",
+  "ui_font_size": 16.0,
+  "terminal": {
+    "font_size": 16.0,
+    "font_family": "JetBrainsMono Nerd Font"
+  },
+  "icon_theme": "Material Icon Theme",
+  "project_panel": { "entry_spacing": "standard", "dock": "right" },
+  "cursor_blink": false,
+  "features": { "edit_prediction_provider": "zed" },
+  "base_keymap": "VSCode",
+  "scrollbar": { "show": "never" },
+  "preview_tabs": { "enabled": false },
+  "indent_guides": { "enabled": true, "coloring": "indent_aware" },
+  // "vim_mode": true,
+  // "relative_line_numbers": "enabled",
+  "buffer_line_height": { "custom": 1.4 },
+  "buffer_font_features": { "calt": true },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false
+  },
+  "tabs": { "file_icons": true },
+  "git": { "inline_blame": { "enabled": true } },
+  "current_line_highlight": "none",
+  "tab_size": 4,
+  "hard_tabs": true,
 
-	"buffer_font_family": "JetBrainsMono Nerd Font",
-	"buffer_font_size": 17.0,
-	"ui_font_family": "JetBrainsMono Nerd Font",
-	"ui_font_size": 16.0,
-	"terminal": {
-		"font_size": 16.0,
-		"font_family": "JetBrainsMono Nerd Font",
-	},
-	"icon_theme": "Catppuccin Mocha",
-	"project_panel": { "entry_spacing": "standard", "dock": "right" },
-	"cursor_blink": false,
-	"features": { "edit_prediction_provider": "zed" },
-	"base_keymap": "VSCode",
-	"scrollbar": { "show": "never" },
-	"preview_tabs": { "enabled": false },
-	"indent_guides": { "enabled": true, "coloring": "indent_aware" },
-	//"vim_mode": true,
-	// "relative_line_numbers": "enabled",
-	"buffer_line_height": { "custom": 1.4 },
-	"buffer_font_features": { "calt": true },
-	"toolbar": {
-		"breadcrumbs": false,
-		"quick_actions": false,
-		"selections_menu": false,
-	},
-	"tabs": { "file_icons": true },
-	"git": { "inline_blame": { "enabled": true } },
-	"current_line_highlight": "none",
-	"tab_size": 4,
-	"hard_tabs": true,
-
-	"languages": {
-		"TypeScript": { "language_servers": ["tailwindcss-language-server"] },
-		"JavaScript": { "language_servers": ["tailwindcss-language-server"] },
-		"TSX": { "language_servers": ["tailwindcss-language-server"] },
-		"HTML": { "language_servers": ["tailwindcss-language-server"] },
-		"Vue.js": { "language_servers": ["tailwindcss-language-server"] },
-		"Svelte": { "language_servers": ["tailwindcss-language-server"] },
-	},
-	"lsp": {
-		"tailwindcss-language-server": {
-			"settings": {
-				"includeLanguages": {
-					"vue": "html",
-					"svelte": "html",
-				},
-				"classFunctions": ["cn", "clsx", "classnames", "cva", "cx"],
-				"experimental": {
-					"classRegex": [
-						"\\.className\\s*[+]?=\\s*['\\\"]([^'\\\"]*)['\\\"]",
-						"\\.setAttribute\\(['\\\"]class['\\\"],\\s*['\\\"]([^'\\\"]*)['\\\"]",
-						"\\.classList\\.add\\(['\\\"]([^'\\\"]*)['\\\"]",
-						"\\.classList\\.remove\\(['\\\"]([^'\\\"]*)['\\\"]",
-						"\\.classList\\.toggle\\(['\\\"]([^'\\\"]*)['\\\"]",
-						"\\.classList\\.contains\\(['\\\"]([^'\\\"]*)['\\\"]",
-						"\\.classList\\.replace\\(\\s*['\\\"]([^'\\\"]*)['\\\"]",
-						"\\.classList\\.replace\\([^,)]+,\\s*['\\\"]([^'\\\"]*)['\\\"]",
-					],
-				},
-			},
-		},
-	},
+  "languages": {
+    "TypeScript": { "language_servers": ["tailwindcss-language-server"] },
+    "JavaScript": { "language_servers": ["tailwindcss-language-server"] },
+    "TSX": { "language_servers": ["tailwindcss-language-server"] },
+    "HTML": { "language_servers": ["tailwindcss-language-server"] },
+    "Vue.js": { "language_servers": ["tailwindcss-language-server"] },
+    "Svelte": { "language_servers": ["tailwindcss-language-server"] }
+  },
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "vue": "html",
+          "svelte": "html"
+        },
+        "classFunctions": ["cn", "clsx", "classnames", "cva", "cx"],
+        "experimental": {
+          "classRegex": [
+            "\\.className\\s*[+]?=\\s*['\\\"]([^'\\\"]*)['\\\"]",
+            "\\.setAttribute\\(['\\\"]class['\\\"],\\s*['\\\"]([^'\\\"]*)['\\\"]",
+            "\\.classList\\.add\\(['\\\"]([^'\\\"]*)['\\\"]",
+            "\\.classList\\.remove\\(['\\\"]([^'\\\"]*)['\\\"]",
+            "\\.classList\\.toggle\\(['\\\"]([^'\\\"]*)['\\\"]",
+            "\\.classList\\.contains\\(['\\\"]([^'\\\"]*)['\\\"]",
+            "\\.classList\\.replace\\(\\s*['\\\"]([^'\\\"]*)['\\\"]",
+            "\\.classList\\.replace\\([^,)]+,\\s*['\\\"]([^'\\\"]*)['\\\"]"
+          ]
+        }
+      }
+    }
+  }
 }
