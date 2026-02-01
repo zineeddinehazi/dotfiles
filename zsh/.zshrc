@@ -1,4 +1,7 @@
-#Go path
+# Unload ollama after being idle
+export OLLAMA_KEEP_ALIVE=0
+
+# Go path
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
