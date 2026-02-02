@@ -1,10 +1,10 @@
 {
 	"telemetry": { "diagnostics": false, "metrics": false },
-	"theme": "Rosé Pine",
+	"theme": "Catppuccin Mocha",
 	"theme_overrides": {
-		"Rosé Pine": {
-			"background": "#000000",
+		"Catppuccin Mocha": {
 			"surface.background": "#000000",
+			"background": "#000000",
 			"elevated_surface.background": "#000000",
 			"editor.background": "#000000",
 			"editor.gutter.background": "#000000",
@@ -16,12 +16,10 @@
 			"title_bar.background": "#000000",
 			"toolbar.background": "#000000",
 			"terminal.background": "#000000",
-			"text": "#ffffff",
-			"editor.foreground": "#ffffff",
-			"terminal.foreground": "#ffffff",
+			"border": "#00000000",
+			"border.variant": "#00000000",
 		},
 	},
-
 	"buffer_font_family": "Mononoki Nerd Font Mono",
 	"buffer_font_size": 17.0,
 	"ui_font_family": "Mononoki Nerd Font Mono",
