@@ -2,9 +2,6 @@
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
-# Texlive path
-export PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH
-
 # Zinit setup
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -33,15 +30,20 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # Keybindings
+
 bindkey '^p' history-search-backward
+
 bindkey '^n' history-search-forward
 
 # History
+
 HISTSIZE=5000
+
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
+
 setopt sharehistory
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
@@ -55,27 +57,30 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+
 # Aliases
 alias c="clear"
 alias ls="eza --icons"
+
 alias la="eza -a --icons"
 alias tree="eza -T --icons"
 alias cd="z"
+
 alias cat="bat"
 
 # Enable zoxide
 eval "$(zoxide init zsh)"
 
 # Shell integrations
+
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
-# NVM setup
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=$HOME/.local/bin:$PATH
-
 # Node path 
 export PATH="$HOME/.npm-global/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$HOME/.local/bin:$PATH"
