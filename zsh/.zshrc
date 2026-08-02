@@ -1,6 +1,14 @@
-# Go path
+# PATHS
+# Golang
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+# Node
+export PATH="$HOME/.npm-global/bin:$PATH"
+# Bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Zinit setup
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -77,15 +85,8 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
-# Node path 
-export PATH="$HOME/.npm-global/bin:$PATH"
-
 # bun completions
 [ -s "/home/zinou/.bun/_bun" ] && source "/home/zinou/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
